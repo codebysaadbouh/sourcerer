@@ -5,8 +5,8 @@ import Typography from '@mui/material/Typography';
 import './Home.css';
 
 interface Person {
-    avatarUrl : string
-    bio : string
+    avatarUrl : string;
+    bio : string;
     company: string
     createdAt: string
     login: string
@@ -32,10 +32,7 @@ const person = gql`
 
 
 const Home: FunctionComponent = () => {
-    const { loading, data } = useQuery<>(
-        GET_ROCKET_INVENTORY,
-        { variables: { year: 2019 } }
-    );    return (
+    return (
         <div className="headerStatus">
             <Container maxWidth="sm">
                 <Typography variant="h4" gutterBottom mt={3} component="div">
